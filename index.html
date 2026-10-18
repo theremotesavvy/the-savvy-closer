@@ -64,7 +64,7 @@ html{overflow-x:clip}
 .mini span{font-size:12.5px;line-height:1.35;color:var(--muted)}
 .hero-pic{position:relative;max-width:420px;justify-self:end;width:100%}
 .hero-pic figure{position:relative;z-index:2;margin:0;aspect-ratio:3/4;border-radius:46% 54% 30px 30px / 38% 40% 30px 30px;overflow:hidden;border:3px solid var(--ink);box-shadow:12px 14px 0 var(--orange);rotate:2.5deg}
-.hero-pic img{width:100%;height:100%;object-fit:cover;object-position:50% 35%}
+.hero-pic img{width:100%;height:100%;object-fit:cover;object-position:50% 25%}
 .hero-blob{position:absolute;z-index:0;width:78%;aspect-ratio:1;background:var(--lilac);border-radius:58% 42% 50% 50%;left:-18%;bottom:-6%}
 .hero-pic .spark{z-index:3}
 .hs{left:-30px;bottom:40px;transform:rotate(-6deg);background:var(--blush)}
@@ -89,7 +89,7 @@ html{overflow-x:clip}
 .spark{position:absolute;z-index:1}
 .portrait{position:relative;z-index:2;margin:0;justify-self:end;width:min(390px,100%);aspect-ratio:9/13;border-radius:999px 999px 30px 30px;overflow:hidden;border:3px solid var(--ink);box-shadow:-12px 14px 0 var(--ink);transform:rotate(-3deg)}
 .portrait img,.ph img{width:100%;height:100%;object-fit:cover}
-.portrait img{object-position:50% 30%}
+.portrait img{object-position:40% 75%}
 .call-wrap{position:relative;z-index:3;margin-left:-70px;margin-top:180px}
 .call{position:relative;z-index:2;background:var(--ink);color:var(--cream);border-radius:28px;padding:30px;text-align:left;box-shadow:10px 12px 0 var(--orange);transform:rotate(1.5deg)}
 .call-top{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.85;padding-bottom:18px;border-bottom:1px dashed rgba(248,243,236,.25)}
@@ -113,7 +113,7 @@ html{overflow-x:clip}
 .intro-text .label{margin-bottom:18px}
 .intro .polaroid{width:220px;transform:none;rotate:-4deg}
 .polaroid img{height:auto}
-.m-head{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+.m-head{display:block}
 .m-photo{position:relative;width:280px;height:280px;margin-right:40px}
 .m-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;border-radius:50%;border:6px solid var(--orange)}
 .m-photo .sticker{left:-40px;bottom:6px;transform:rotate(-8deg);background:var(--lilac);color:var(--ink)}
@@ -312,7 +312,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
         <div class="hero-blob"></div>
         <svg class="spark" style="left:-6px;top:20px" width="56" height="56" fill="#24142F"><use href="#spark"/></svg>
         <svg class="spark" style="right:-14px;bottom:80px" width="74" height="74" fill="#E2572B"><use href="#burst"/></svg>
-        <figure><img src="img-top.jpg" alt="Bruna Alves smiling at a table with her laptop" width="1050" height="1400" fetchpriority="high"></figure>
+        <figure><img src="img-hero.jpg" alt="Bruna Alves smiling, holding her laptop against a white wall" width="899" height="1400" fetchpriority="high"></figure>
         <span class="sticker hs">Hi, I'm Bruna ✦</span>
       </div>
     </div>
@@ -388,7 +388,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
         <h2 class="rv">Don't pitch.<br>Ask.</h2>
         <p class="lead rv">Every call follows one structure, based on Question-Based Selling. The prospect builds their own case for buying, so the decision sticks after the call ends.</p>
       </div>
-      <div class="m-photo rv"><img src="img-confident.jpg" alt="Bruna looking straight at the camera, holding a laptop" width="638" height="1000" loading="lazy"><span class="sticker">Curious. Calm. Direct.</span></div>
     </div>
     <div class="steps">
       <div class="step rv"><div class="n">01</div><h3>Frame the call</h3><p>Set the agenda, ask permission to ask questions, and make it clear I'll say so if it's not the right fit.</p></div>
@@ -442,7 +441,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
       <svg class="spark" style="left:4%;top:-10px" width="70" height="70" fill="#24142F"><use href="#spark"/></svg>
       <svg class="spark" style="right:2%;bottom:40px" width="90" height="90" fill="#E2572B"><use href="#burst"/></svg>
       <svg class="spark" style="right:30%;top:-30px" width="28" height="28" fill="#E2572B"><use href="#spark"/></svg>
-      <figure class="portrait"><img src="img-hero.jpg" alt="Bruna Alves smiling, holding her laptop on a street in Portugal" width="899" height="1400" fetchpriority="high"></figure>
+      <figure class="portrait"><img src="img-s4.jpg" alt="Bruna smiling on a white street in Portugal, holding her laptop" width="638" height="1000" loading="lazy"></figure>
       <div class="call-wrap">
       <div class="sticker s2">Discovery call · live</div>
       <div class="call" role="img" aria-label="Example of a sales call where Bruna asks questions and the prospect describes their own problem">
@@ -482,7 +481,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
     <div>
     <div class="label">Ready when you are</div>
     <h2>Let's close<br>your calendar.</h2>
-    <p>Tell me about your offer and your calls. If I'm not the right closer for you, I'll tell you — and point you somewhere better.</p>
+    <p>Tell me about your offer and your calls. If I'm not the right closer for you, I'll tell you — and point you in the right direction.</p>
     </div>
     </div>
     <div class="contact">
