@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Savvy Closer — Bruna Alves, Remote Sales Closer</title>
+<meta name="description" content="Remote high-ticket sales closer for coaches, course creators, B2B, SaaS and agencies. Question-based selling, no pressure tactics, real next steps.">
+<meta property="og:title" content="The Savvy Closer — Bruna Alves">
+<meta property="og:description" content="You book the calls. I turn them into clients — by asking, not pitching.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z' fill='%23E2572B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#24142F;      /* deep plum */
+  --ink-2:#3A2347;
+  --cream:#F8F3EC;
+  --paper:#FFFCF7;
+  --line:#E5DCCF;
+  --orange:#E2572B;   /* tangerine accent */
+  --orange-d:#B83F18;
+  --lilac:#CDBBF0;
+  --blush:#F5C6B3;
+  --muted:#5E5265;
+  --display:'Big Shoulders Display', Impact, sans-serif;
+  --mono:'DM Mono', ui-monospace, monospace;
+  --body:'Manrope', system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img,svg{display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--orange-d);display:flex;align-items:center;gap:14px}
+.label::after{content:"";width:48px;height:1px;background:currentColor}
+h1,h2,h3{font-family:var(--display);text-transform:uppercase;line-height:.92;margin:0;letter-spacing:.005em}
+h2{font-size:clamp(48px,7vw,84px);font-weight:900;margin-top:14px}
+.lead{font-size:clamp(17px,1.6vw,19px);color:var(--muted);max-width:620px}
+section{padding:110px 0}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:var(--ink);color:var(--cream)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:13px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none}
+.nav ul{display:flex;gap:30px;list-style:none;margin:0;padding:0;font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase}
+.nav ul a{text-decoration:none;opacity:.85}.nav ul a:hover{opacity:1;color:var(--blush)}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:0 22px;border-radius:999px;font-family:var(--mono);font-size:13px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border:2px solid var(--ink);transition:transform .2s, box-shadow .2s}
+.btn-o{background:var(--orange);color:#fff;border-color:var(--orange)}
+.btn-o:hover{background:var(--orange-d);border-color:var(--orange-d)}
+.nav .btn{min-height:40px;font-size:12px}
+
+/* hero */
+.hero{padding:70px 0 0;position:relative;text-align:center;overflow-x:clip}
+html{overflow-x:clip}
+.hero .hi{font-family:var(--mono);color:var(--orange-d);letter-spacing:.24em;font-size:13px}
+.hero h1{font-size:clamp(60px,11vw,148px);font-weight:900;margin-top:10px}
+.hero h1 .hl{color:var(--orange);position:relative;white-space:nowrap}
+.hero h1 .hl svg{position:absolute;left:0;right:0;bottom:-12px;width:100%;height:18px}
+.hero .sub{font-family:var(--display);text-transform:uppercase;font-weight:800;font-size:clamp(22px,3vw,34px);margin-top:22px}
+.pills{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:34px auto 0;max-width:900px}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;font-family:var(--display);font-weight:800;font-size:17px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:2px solid var(--ink);box-shadow:3px 4px 0 var(--ink);transition:transform .2s}
+.pill:hover{transform:rotate(0) translateY(-3px)!important}
+.pill .dot{width:7px;height:7px;border-radius:50%;background:currentColor;opacity:.6}
+.p1{background:var(--ink);color:var(--cream);transform:rotate(-3deg)}
+.p2{background:var(--blush);transform:rotate(2deg)}
+.p3{background:var(--paper);transform:rotate(-1deg)}
+.p4{background:var(--lilac);transform:rotate(3deg)}
+.p5{background:var(--orange);color:#fff;transform:rotate(-2deg)}
+
+/* hero visual: call card */
+.stage{position:relative;max-width:900px;margin:70px auto 0;padding-bottom:90px}
+.blob{position:absolute;border-radius:50%;z-index:0}
+.b1{width:340px;height:340px;background:var(--lilac);left:-40px;top:40px;border-radius:58% 42% 50% 50%}
+.b2{width:260px;height:260px;background:var(--blush);right:-30px;top:140px;border-radius:45% 55% 40% 60%}
+.spark{position:absolute;z-index:1}
+.call{position:relative;z-index:2;background:var(--ink);color:var(--cream);border-radius:28px;padding:30px;text-align:left;box-shadow:10px 12px 0 var(--orange);max-width:640px;margin:0 auto;transform:rotate(-1.2deg)}
+.call-top{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.85;padding-bottom:18px;border-bottom:1px dashed rgba(248,243,236,.25)}
+.rec{display:flex;align-items:center;gap:8px}.rec i{width:9px;height:9px;border-radius:50%;background:var(--orange);animation:blink 1.4s infinite}
+@keyframes blink{50%{opacity:.25}}
+.msg{margin-top:18px;display:flex;gap:14px;align-items:flex-start}
+.who{flex-shrink:0;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px;border-radius:999px;margin-top:3px}
+.who.me{background:var(--orange);color:#fff}.who.them{background:var(--lilac);color:var(--ink)}
+.msg p{margin:0;font-size:16.5px;line-height:1.5}
+.call .tag{display:inline-block;margin-top:22px;font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--blush)}
+.sticker{position:absolute;z-index:3;background:var(--paper);border:2px solid var(--ink);border-radius:999px;padding:10px 18px;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;box-shadow:3px 4px 0 var(--ink)}
+.s1{left:0;bottom:40px;transform:rotate(-6deg)}
+.s2{right:10px;top:-10px;transform:rotate(5deg);background:var(--orange);color:#fff}
+
+/* marquee */
+.marquee{background:var(--orange);color:#fff;overflow:hidden;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.track{display:flex;width:max-content;animation:scroll 32s linear infinite}
+.track span{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:28px;letter-spacing:.04em;padding:16px 26px;display:flex;align-items:center;gap:26px;white-space:nowrap}
+.track span::after{content:"✦";font-size:20px;color:var(--ink)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* intro */
+.intro{padding:100px 0 30px}
+.intro p{font-size:clamp(22px,2.6vw,30px);line-height:1.4;max-width:960px;margin:0;font-weight:500}
+.intro p em{font-style:normal;background:linear-gradient(transparent 62%, var(--blush) 62%)}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border:2px solid var(--ink);border-radius:24px;overflow:hidden;background:var(--paper);margin-top:60px}
+.stat{padding:30px 26px;border-right:2px solid var(--ink)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-family:var(--display);font-weight:900;font-size:clamp(52px,6vw,74px);line-height:1;color:var(--orange)}
+.stat span{display:block;margin-top:10px;font-size:14.5px;color:var(--muted);line-height:1.45}
+
+/* who */
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:50px}
+.aud{border-radius:26px;padding:36px;border:2px solid var(--ink);position:relative}
+.aud.a1{background:var(--lilac)}.aud.a2{background:var(--blush)}
+.aud h3{font-size:44px;font-weight:900}
+.aud .mono{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+.aud ul{margin:20px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+.aud li{padding-left:28px;position:relative}
+.aud li::before{content:"✦";position:absolute;left:0;color:var(--orange-d)}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(2,1fr);border:1px solid var(--line);margin-top:56px;background:var(--paper)}
+.svc article{padding:36px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.svc article:nth-child(2n){border-right:0}
+.svc .n{font-family:var(--mono);font-size:13px;color:var(--orange-d)}
+.svc h3{font-size:30px;font-weight:800;margin:12px 0 12px}
+.svc p{margin:0;color:var(--muted);font-size:15.5px}
+
+/* method */
+.method{background:var(--ink);color:var(--cream);position:relative;overflow:hidden}
+.method .label{color:var(--blush)}
+.method .lead{color:#CFC4D6}
+.quote{font-family:var(--display);text-transform:uppercase;font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1;margin:46px 0 0;max-width:900px}
+.quote span{color:var(--orange)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:56px}
+.step{border:1px solid rgba(248,243,236,.2);border-radius:22px;padding:28px;background:rgba(255,255,255,.03)}
+.step.key{background:var(--orange);border-color:var(--orange);color:#fff}
+.step .n{font-family:var(--display);font-weight:900;font-size:54px;line-height:1;color:var(--lilac)}
+.step.key .n{color:var(--ink)}
+.step h3{font-size:28px;font-weight:800;margin:10px 0}
+.step p{margin:0;font-size:15px;color:#D8CEDD}
+.step.key p{color:#fff}
+.chip{display:inline-block;margin-top:14px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;background:var(--ink);color:var(--cream);padding:5px 12px;border-radius:999px}
+.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.rule{border-top:2px solid var(--orange);padding-top:18px}
+.rule b{font-family:var(--display);text-transform:uppercase;font-size:24px;font-weight:800;display:block;line-height:1.05}
+.rule p{margin:8px 0 0;font-size:15px;color:#CFC4D6}
+
+/* journey */
+.journey{display:grid;grid-template-columns:1fr 1.25fr;gap:60px;align-items:start;margin-top:10px}
+.about p{color:var(--muted);margin:0 0 18px}
+.about p:first-of-type{font-size:21px;color:var(--ink);font-weight:500}
+.tl{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.tl li{display:grid;grid-template-columns:1fr auto;gap:6px 20px;padding:22px 0;border-bottom:1px solid var(--line)}
+.tl h4{margin:0;font-family:var(--display);text-transform:uppercase;font-weight:800;font-size:25px;line-height:1.05}
+.tl .co{font-size:14.5px;color:var(--muted);grid-column:1}
+.tl .win{grid-column:2;grid-row:1 / span 2;align-self:center;font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:999px;border:1.5px solid var(--ink);white-space:nowrap;background:var(--paper)}
+.tl li:nth-child(1) .win{background:var(--orange);color:#fff;border-color:var(--orange)}
+.tl li:nth-child(2) .win{background:var(--lilac)}
+.tl li:nth-child(3) .win{background:var(--blush)}
+
+/* faq */
+.faq{margin-top:46px;border-top:2px solid var(--ink)}
+details{border-bottom:1px solid var(--line);padding:4px 0}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 0;font-family:var(--display);text-transform:uppercase;font-weight:800;font-size:clamp(22px,2.4vw,28px);line-height:1.1}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--mono);font-size:26px;color:var(--orange);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:0 0 22px;color:var(--muted);max-width:780px}
+
+/* cta */
+.cta{background:var(--orange);color:#fff;text-align:center;position:relative;overflow:hidden;border-top:2px solid var(--ink)}
+.cta .label{justify-content:center;color:var(--ink)}
+.cta .label::before{content:"";width:48px;height:1px;background:currentColor}
+.cta h2{font-size:clamp(56px,9vw,120px);color:var(--ink)}
+.cta p{max-width:640px;margin:22px auto 0;font-size:18px}
+.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:50px;text-align:left}
+.contact a{display:flex;flex-direction:column;gap:8px;background:var(--ink);color:var(--cream);border-radius:22px;padding:24px 26px;text-decoration:none;border:2px solid var(--ink);transition:transform .2s}
+.contact a:hover{transform:translateY(-4px) rotate(-1deg)}
+.contact a:first-child{background:var(--paper);color:var(--ink)}
+.contact small{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;opacity:.75}
+.contact strong{font-family:var(--display);text-transform:uppercase;font-weight:800;font-size:24px;line-height:1.1;word-break:break-word}
+
+footer{background:var(--ink);color:var(--cream);padding:34px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.track,.rec i{animation:none}.rv{opacity:1;transform:none}}
+
+@media (max-width:900px){
+  .nav ul{display:none}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(-n+2){border-bottom:2px solid var(--ink)}
+  .who-grid,.journey{grid-template-columns:1fr}
+  .steps,.rules{grid-template-columns:1fr 1fr}
+  .contact{grid-template-columns:1fr}
+}
+@media (max-width:620px){
+  section{padding:80px 0}
+  .wrap{padding:0 16px}
+  .svc{grid-template-columns:1fr}
+  .svc article{border-right:0}
+  .steps,.rules{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr}
+  .stat{border-right:0;border-bottom:2px solid var(--ink)}
+  .stat:last-child{border-bottom:0}
+  .b1{width:220px;height:220px}.b2{width:180px;height:180px}
+  .call{padding:22px}
+  .s1{bottom:20px}
+  .aud{padding:26px}.aud h3{font-size:36px}
+  .tl li{grid-template-columns:1fr}
+  .tl .win{grid-column:1;grid-row:auto;justify-self:start}
+  .nav .btn span.long{display:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="spark" viewBox="0 0 24 24"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z"/></symbol>
+    <symbol id="burst" viewBox="0 0 100 100"><path d="M50 0l7 20 18-11-4 21 21-2-15 15 19 10-21 5 12 18-21-6 1 21-15-15-10 19-5-21-18 12 6-21-21 1 15-15L1 46l21-5L10 23l21 6-1-21 15 15z"/></symbol>
+  </defs>
+</svg>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a href="#top" class="brand"><svg width="18" height="18" fill="#F5C6B3"><use href="#spark"/></svg>The Savvy Closer</a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#method">Method</a></li>
+      <li><a href="#journey">Journey</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="btn btn-o" href="https://calendar.app.google/1NFmuSzR9HDfeMqQ6" target="_blank" rel="noopener">Book a call<span class="long"> ↗</span></a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hi">— HI, I'M BRUNA.</div>
+    <h1>Your calls,<br><span class="hl">closed.<svg viewBox="0 0 300 18" preserveAspectRatio="none" aria-hidden="true"><path d="M3 12 C 80 2, 200 2, 297 10" stroke="#24142F" stroke-width="4" fill="none" stroke-linecap="round"/></svg></span></h1>
+    <p class="sub">A remote sales closer who asks — and doesn't pitch.</p>
+    <div class="pills">
+      <a class="pill p1" href="#services"><span class="dot"></span>Services</a>
+      <a class="pill p2" href="#method"><span class="dot"></span>How I sell</a>
+      <a class="pill p3" href="#journey"><span class="dot"></span>Track record</a>
+      <a class="pill p4" href="#faq"><span class="dot"></span>FAQ</a>
+      <a class="pill p5" href="https://calendar.app.google/1NFmuSzR9HDfeMqQ6" target="_blank" rel="noopener">Book an intro call ↗</a>
+    </div>
+
+    <div class="stage">
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+      <svg class="spark" style="left:6%;top:-20px" width="70" height="70" fill="#24142F"><use href="#spark"/></svg>
+      <svg class="spark" style="right:4%;bottom:70px" width="90" height="90" fill="#E2572B"><use href="#burst"/></svg>
+      <svg class="spark" style="right:22%;top:-34px" width="28" height="28" fill="#E2572B"><use href="#spark"/></svg>
+      <div class="sticker s2">Discovery call · live</div>
+      <div class="call" role="img" aria-label="Example of a sales call where Bruna asks questions and the prospect describes their own problem">
+        <div class="call-top"><span class="rec"><i></i>Rec 00:24:17</span><span>Prospect × Bruna</span></div>
+        <div class="msg"><span class="who me">Bruna</span><p>What made you reach out <b>now</b> — not six months ago?</p></div>
+        <div class="msg"><span class="who them">Them</span><p>Honestly? We're booking calls, but half of them just… go quiet afterwards.</p></div>
+        <div class="msg"><span class="who me">Bruna</span><p>And if nothing changes over the next year — what does that cost you?</p></div>
+        <div class="msg"><span class="who them">Them</span><p>…a lot more than I'd like to say out loud.</p></div>
+        <span class="tag">✦ That's the moment the sale is made.</span>
+      </div>
+      <div class="sticker s1">No pressure. Real next steps.</div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>High-ticket closing</span><span>Discovery calls</span><span>Question-based selling</span><span>Objection handling</span><span>Follow-up that lands</span><span>CRM &amp; pipeline</span>
+    <span>High-ticket closing</span><span>Discovery calls</span><span>Question-based selling</span><span>Objection handling</span><span>Follow-up that lands</span><span>CRM &amp; pipeline</span>
+  </div>
+</div>
+
+<section class="intro">
+  <div class="wrap">
+    <p class="rv">You've done the hard part: the content, the ads, the outreach — the calendar is filling up. But a booked call isn't a client. <em>I take your sales calls and turn them into clients</em>, by getting prospects to say out loud why they need what you sell. They believe 0% of what you tell them and 100% of what they tell themselves.</p>
+    <div class="stats rv">
+      <div class="stat"><b>28</b><span>deals &amp; new phases closed in the last 12 months (B2B software implementation)</span></div>
+      <div class="stat"><b>260%</b><span>of target in my final quarter as Renewals Account Manager for Dell EMC</span></div>
+      <div class="stat"><b>&lt;$1K</b><span>cost per hire on a recruiting process I built from scratch</span></div>
+      <div class="stat"><b>10+</b><span>years selling across Brazil, Ireland and remote, worldwide</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="who">
+  <div class="wrap">
+    <div class="label rv">Who I close for</div>
+    <h2 class="rv">Two kinds of<br>businesses</h2>
+    <div class="who-grid">
+      <div class="aud a1 rv">
+        <div class="mono">01 · High-ticket offers</div>
+        <h3>Coaches &amp; course creators</h3>
+        <ul>
+          <li>Programmes, masterminds and mentorships with a call-to-enrol funnel</li>
+          <li>Booked calls from content, ads or a waitlist — and nobody with the time to take them</li>
+          <li>You want people enrolled who are a real fit, not talked into it</li>
+        </ul>
+      </div>
+      <div class="aud a2 rv">
+        <div class="mono">02 · Considered purchases</div>
+        <h3>B2B, SaaS &amp; agencies</h3>
+        <ul>
+          <li>Founders still running every discovery call themselves</li>
+          <li>Longer cycles, several stakeholders, a procurement step</li>
+          <li>Deals that stall after "let us think about it"</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" style="padding-top:20px">
+  <div class="wrap">
+    <div class="label rv">What I do</div>
+    <h2 class="rv">Services</h2>
+    <p class="lead rv">You bring the leads and the offer. I run the conversation from first hello to a confirmed next step, and I hand you clean notes on every call.</p>
+    <div class="svc">
+      <article class="rv"><div class="n">01</div><h3>Sales call closing</h3><p>I take your booked discovery and sales calls: frame the call, uncover the real problem, show what it's costing them, and close on a committed next step — enrolment, proposal or kick-off.</p></article>
+      <article class="rv"><div class="n">02</div><h3>Follow-up &amp; recovery</h3><p>No-shows, "I need to think about it" and leads that went quiet. Structured follow-up within 24–48 hours, so warm prospects don't cool off in your inbox.</p></article>
+      <article class="rv"><div class="n">03</div><h3>Sales process &amp; scripts</h3><p>A call framework built on question-based selling: discovery questions, transition lines, an objection playbook and follow-up emails, written for your offer and your buyers.</p></article>
+      <article class="rv"><div class="n">04</div><h3>Pipeline &amp; CRM setup</h3><p>monday.com or HubSpot pipelines, booking-to-close stages and follow-up automations, so you can see every deal and nothing slips. Systems I build for a living.</p></article>
+      <article class="rv"><div class="n">05</div><h3>Call reviews &amp; coaching</h3><p>Already have a closer, or closing yourself? I review recorded calls, point out where the sale was won or lost, and coach the team on what to change.</p></article>
+      <article class="rv"><div class="n">06</div><h3>Reporting you can act on</h3><p>Show-up rate, close rate, top objections and the reasons people buy, in their own words. Feedback that improves your marketing as well as your sales.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="method" id="method">
+  <svg class="spark" style="right:6%;top:70px;opacity:.9" width="80" height="80" fill="#E2572B"><use href="#burst"/></svg>
+  <svg class="spark" style="right:18%;top:40px" width="26" height="26" fill="#CDBBF0"><use href="#spark"/></svg>
+  <div class="wrap">
+    <div class="label rv">How I sell</div>
+    <h2 class="rv">Don't pitch.<br>Ask.</h2>
+    <p class="lead rv">Every call follows one structure, based on Question-Based Selling. The prospect builds their own case for buying, so the decision sticks after the call ends.</p>
+    <div class="steps">
+      <div class="step rv"><div class="n">01</div><h3>Frame the call</h3><p>Set the agenda, ask permission to ask questions, and make it clear I'll say so if it's not the right fit.</p></div>
+      <div class="step rv"><div class="n">02</div><h3>Discovery</h3><p>Why now? What triggered the call? Who's involved? Listen to understand, not to reply — and write down their exact words.</p></div>
+      <div class="step key rv"><div class="n">03</div><h3>Build the gap</h3><p>Where they are today, where they want to be, and what staying put costs them. In their words, in their numbers.</p><span class="chip">The sale is made here</span></div>
+      <div class="step rv"><div class="n">04</div><h3>Transition</h3><p>Only when they've named the consequence and described the result they want. Never because the clock says so.</p></div>
+      <div class="step rv"><div class="n">05</div><h3>Present &amp; commit</h3><p>Short and specific: three pillars at most, each tied to something they said. Then a read on how they're feeling.</p></div>
+      <div class="step rv"><div class="n">06</div><h3>Close &amp; follow up</h3><p>A real next step, booked on the call, with two set time slots. Objections handled honestly — never with fake urgency.</p></div>
+    </div>
+    <p class="quote rv">"If we're not the right fit, I'll tell you. <span>Either way, the decision is yours."</span></p>
+    <div class="rules">
+      <div class="rule rv"><b>No invented urgency</b><p>No fake deadlines, made-up discounts or "only two spots left". Buyers can tell, and it hurts your brand.</p></div>
+      <div class="rule rv"><b>No promises you can't keep</b><p>I only use claims, results and examples that are true. Every client is a long-term reference for your business.</p></div>
+      <div class="rule rv"><b>Detached from the deal</b><p>I care about the prospect getting the right result, not about one more close. People can hear the difference.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="journey">
+  <div class="wrap">
+    <div class="label rv">Track record</div>
+    <h2 class="rv">My sales journey</h2>
+    <div class="journey" style="margin-top:46px">
+      <div class="about rv">
+        <p>I started on a shop floor in Brazil, and I've been selling ever since — retail, enterprise renewals, recruitment, partnerships and software implementation.</p>
+        <p>Over 12 years living in Europe and 6 years as a freelancer, I've sold on the phone to Dell EMC resellers, recruited talent for international companies, built a global partner network from nothing and closed implementation deals for a Platinum monday.com partner.</p>
+        <p>The common thread is the same: people buy when they feel understood. My job is to ask the questions that get them there — and then make the next step easy.</p>
+        <a class="btn btn-o" style="margin-top:10px" href="https://www.linkedin.com/in/theremotesavvy/" target="_blank" rel="noopener">Full profile on LinkedIn ↗</a>
+      </div>
+      <ol class="tl rv">
+        <li><h4>Implementation sales</h4><span class="co">Platinum monday.com partner · Remote</span><span class="win">28 closed / 12 mo</span></li>
+        <li><h4>Recruiter &amp; Partnerships Manager</h4><span class="co">AdVenture Media Group · 2021 – present</span><span class="win">Global partner network</span></li>
+        <li><h4>Renewals Account Manager — Dell EMC</h4><span class="co">ServiceSource · Dublin</span><span class="win">260% of target</span></li>
+        <li><h4>Supervisor</h4><span class="co">Forever 21 · Dublin · team of 60</span><span class="win">Team lead</span></li>
+        <li><h4>Sales Advisor</h4><span class="co">Chilli Beans · Brazil</span><span class="win">+60% over target</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:20px">
+  <div class="wrap">
+    <div class="label rv">Before you book</div>
+    <h2 class="rv">Questions</h2>
+    <div class="faq rv">
+      <details><summary>How do you charge?</summary><p>Usually a retainer plus commission on closed deals, or commission only for offers with a strong, proven lead flow. We agree on the model on our intro call, once I understand your offer, price point and call volume.</p></details>
+      <details><summary>What do you need from me to start?</summary><p>Access to your booking calendar and CRM, your offer details and pricing, any call recordings or FAQs you already have, and an hour to walk me through your ideal client. I'll take it from there.</p></details>
+      <details><summary>Do you use high-pressure tactics?</summary><p>No. No fake scarcity, no invented discounts, no guilt. I close by helping people see their own problem clearly. Clients who buy that way stay, refer and don't ask for refunds.</p></details>
+      <details><summary>Which time zones do you cover?</summary><p>I work remotely from Europe, so UK and EU hours are home ground, with overlap for US East Coast and Brazil calls.</p></details>
+      <details><summary>Can you also fix my pipeline?</summary><p>Yes. I build CRM and workflow systems in monday.com and HubSpot as part of my day job, so if leads are slipping between booking and close, I can set that up too.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <svg class="spark" style="left:6%;top:60px" width="60" height="60" fill="#24142F"><use href="#spark"/></svg>
+  <svg class="spark" style="right:7%;bottom:80px" width="90" height="90" fill="#F5C6B3"><use href="#burst"/></svg>
+  <div class="wrap">
+    <div class="label">Ready when you are</div>
+    <h2>Let's close<br>your calendar.</h2>
+    <p>Tell me about your offer and your calls. If I'm not the right closer for you, I'll tell you — and point you somewhere better.</p>
+    <div class="contact">
+      <a href="https://calendar.app.google/1NFmuSzR9HDfeMqQ6" target="_blank" rel="noopener"><small>Book a call</small><strong>Schedule an intro call ↗</strong></a>
+      <a href="mailto:bruna@theremotesavvy.com"><small>Email</small><strong>bruna@theremotesavvy.com ↗</strong></a>
+      <a href="https://www.linkedin.com/in/theremotesavvy/" target="_blank" rel="noopener"><small>LinkedIn</small><strong>in/theremotesavvy ↗</strong></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><span>✦ The Savvy Closer · Bruna Alves</span><span>Remote sales closing · Worldwide</span></div>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
