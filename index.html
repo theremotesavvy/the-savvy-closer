@@ -70,12 +70,16 @@ html{overflow-x:clip}
 .p5{background:var(--orange);color:#fff;transform:rotate(-2deg)}
 
 /* hero visual: call card */
-.stage{position:relative;max-width:900px;margin:70px auto 0;padding-bottom:90px}
+.stage{position:relative;max-width:1040px;margin:70px auto 0;padding-bottom:110px;display:grid;grid-template-columns:1fr 1.1fr;align-items:center}
 .blob{position:absolute;border-radius:50%;z-index:0}
-.b1{width:340px;height:340px;background:var(--lilac);left:-40px;top:40px;border-radius:58% 42% 50% 50%}
-.b2{width:260px;height:260px;background:var(--blush);right:-30px;top:140px;border-radius:45% 55% 40% 60%}
+.b1{width:380px;height:380px;background:var(--lilac);left:2%;top:60px;border-radius:58% 42% 50% 50%}
+.b2{width:260px;height:260px;background:var(--blush);right:0;bottom:30px;border-radius:45% 55% 40% 60%}
 .spark{position:absolute;z-index:1}
-.call{position:relative;z-index:2;background:var(--ink);color:var(--cream);border-radius:28px;padding:30px;text-align:left;box-shadow:10px 12px 0 var(--orange);max-width:640px;margin:0 auto;transform:rotate(-1.2deg)}
+.portrait{position:relative;z-index:2;margin:0;justify-self:end;width:min(390px,100%);aspect-ratio:9/13;border-radius:999px 999px 30px 30px;overflow:hidden;border:3px solid var(--ink);box-shadow:-12px 14px 0 var(--ink);transform:rotate(-3deg)}
+.portrait img,.ph img{width:100%;height:100%;object-fit:cover}
+.portrait img{object-position:50% 30%}
+.call-wrap{position:relative;z-index:3;margin-left:-70px;margin-top:180px}
+.call{position:relative;z-index:2;background:var(--ink);color:var(--cream);border-radius:28px;padding:30px;text-align:left;box-shadow:10px 12px 0 var(--orange);transform:rotate(1.5deg)}
 .call-top{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.85;padding-bottom:18px;border-bottom:1px dashed rgba(248,243,236,.25)}
 .rec{display:flex;align-items:center;gap:8px}.rec i{width:9px;height:9px;border-radius:50%;background:var(--orange);animation:blink 1.4s infinite}
 @keyframes blink{50%{opacity:.25}}
@@ -85,8 +89,44 @@ html{overflow-x:clip}
 .msg p{margin:0;font-size:16.5px;line-height:1.5}
 .call .tag{display:inline-block;margin-top:22px;font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--blush)}
 .sticker{position:absolute;z-index:3;background:var(--paper);border:2px solid var(--ink);border-radius:999px;padding:10px 18px;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;box-shadow:3px 4px 0 var(--ink)}
-.s1{left:0;bottom:40px;transform:rotate(-6deg)}
-.s2{right:10px;top:-10px;transform:rotate(5deg);background:var(--orange);color:#fff}
+.s1{left:30px;bottom:-70px;transform:rotate(-6deg)}
+.s2{right:10px;top:-26px;transform:rotate(5deg);background:var(--orange);color:#fff}
+
+/* photo bits */
+.polaroid{margin:0;background:var(--paper);padding:12px 12px 14px;border:2px solid var(--ink);box-shadow:6px 8px 0 var(--ink);transform:rotate(4deg);width:260px;flex-shrink:0;position:relative}
+.polaroid img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;display:block}
+.polaroid figcaption{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;text-align:center;margin-top:12px}
+.tape{position:absolute;width:90px;height:26px;background:rgba(205,187,240,.85);top:-13px;left:50%;transform:translateX(-50%) rotate(-4deg)}
+.intro-row{display:flex;gap:70px;align-items:center}
+.m-head{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+.m-photo{position:relative;width:280px;height:280px;margin-right:40px}
+.m-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;border-radius:50%;border:6px solid var(--orange)}
+.m-photo .sticker{left:-40px;bottom:6px;transform:rotate(-8deg);background:var(--lilac);color:var(--ink)}
+.collage{position:relative;padding:0 40px 60px 0}
+.collage .big{margin:0;border-radius:30px 30px 999px 999px;overflow:hidden;border:3px solid var(--ink);aspect-ratio:4/5;transform:rotate(2deg);box-shadow:12px 12px 0 var(--blush)}
+.collage .big img{width:100%;height:100%;object-fit:cover;object-position:50% 70%}
+.collage .stamp{position:absolute;right:0;bottom:0;width:44%;margin:0;border:3px solid var(--ink);border-radius:18px;overflow:hidden;transform:rotate(-7deg);box-shadow:6px 6px 0 var(--ink);aspect-ratio:3/4}
+.collage .stamp img{width:100%;height:100%;object-fit:cover}
+.collage .sticker{left:-14px;top:30px;transform:rotate(-7deg)}
+
+/* ribbon */
+.ribbon{padding:30px 0 90px;overflow:hidden}
+.ribbon .label{justify-content:center;margin-bottom:34px}
+.ribbon .label::before{content:"";width:48px;height:1px;background:currentColor}
+.rtrack{display:flex;gap:28px;width:max-content;animation:scroll 60s linear infinite;padding:20px 0}
+.ribbon:hover .rtrack{animation-play-state:paused}
+.ph{margin:0;width:230px;height:300px;flex-shrink:0;border:2px solid var(--ink);border-radius:20px;overflow:hidden;background:var(--paper)}
+.ph:nth-child(3n+1){transform:rotate(-4deg) translateY(10px);border-radius:999px 999px 20px 20px}
+.ph:nth-child(3n+2){transform:rotate(3deg) translateY(-14px);width:260px;height:260px;border-radius:50%}
+.ph:nth-child(3n){transform:rotate(-1.5deg) translateY(18px);box-shadow:6px 6px 0 var(--orange)}
+
+/* cta photo */
+.cta-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:center;text-align:left}
+.cta .cta-grid .label{justify-content:flex-start}.cta .cta-grid .label::before{display:none}
+.cta .cta-grid p{margin:22px 0 0}
+.cta .cta-grid h2{font-size:clamp(56px,7.4vw,108px)}
+.cta-photo{margin:0;position:relative;border:3px solid var(--ink);border-radius:28px;overflow:hidden;transform:rotate(-4deg);box-shadow:12px 12px 0 var(--ink);aspect-ratio:4/5}
+.cta-photo img{width:100%;height:100%;object-fit:cover;object-position:38% 40%}
 
 /* marquee */
 .marquee{background:var(--orange);color:#fff;overflow:hidden;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
@@ -196,6 +236,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
   .who-grid,.journey{grid-template-columns:1fr}
   .steps,.rules{grid-template-columns:1fr 1fr}
   .contact{grid-template-columns:1fr}
+  .stage{grid-template-columns:1fr;padding-bottom:90px}
+  .portrait{justify-self:center;width:min(330px,82%)}
+  .call-wrap{margin:-70px 0 0;padding:0 4px}
+  .b1{left:-60px;top:20px}
+  .intro-row{flex-direction:column;gap:50px}
+  .m-head{grid-template-columns:1fr}
+  .m-photo{margin:10px auto 0;width:240px;height:240px}
+  .collage{max-width:460px;margin:0 auto}
+  .cta-grid{grid-template-columns:1fr;gap:50px}
+  .cta-photo{max-width:440px;width:100%;margin:0 auto}
 }
 @media (max-width:620px){
   section{padding:80px 0}
@@ -213,7 +263,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
   .tl li{grid-template-columns:1fr}
   .tl .win{grid-column:1;grid-row:auto;justify-self:start}
   .nav .btn span.long{display:none}
+  .ph{width:170px;height:225px}
+  .ph:nth-child(3n+2){width:190px;height:190px}
+  .call{transform:rotate(1deg)}
+  .s1{left:10px;bottom:-60px}
+  .m-photo .sticker{left:-10px}
+  .cta .spark{display:none}
 }
+@media (prefers-reduced-motion:reduce){.rtrack{animation:none;overflow-x:auto;width:auto}}
 </style>
 </head>
 <body>
@@ -254,9 +311,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
     <div class="stage">
       <div class="blob b1"></div>
       <div class="blob b2"></div>
-      <svg class="spark" style="left:6%;top:-20px" width="70" height="70" fill="#24142F"><use href="#spark"/></svg>
-      <svg class="spark" style="right:4%;bottom:70px" width="90" height="90" fill="#E2572B"><use href="#burst"/></svg>
-      <svg class="spark" style="right:22%;top:-34px" width="28" height="28" fill="#E2572B"><use href="#spark"/></svg>
+      <svg class="spark" style="left:4%;top:-10px" width="70" height="70" fill="#24142F"><use href="#spark"/></svg>
+      <svg class="spark" style="right:2%;bottom:40px" width="90" height="90" fill="#E2572B"><use href="#burst"/></svg>
+      <svg class="spark" style="right:30%;top:-30px" width="28" height="28" fill="#E2572B"><use href="#spark"/></svg>
+      <figure class="portrait"><img src="img-hero.jpg" alt="Bruna Alves smiling, holding her laptop on a street in Portugal" width="899" height="1400" fetchpriority="high"></figure>
+      <div class="call-wrap">
       <div class="sticker s2">Discovery call · live</div>
       <div class="call" role="img" aria-label="Example of a sales call where Bruna asks questions and the prospect describes their own problem">
         <div class="call-top"><span class="rec"><i></i>Rec 00:24:17</span><span>Prospect × Bruna</span></div>
@@ -267,6 +326,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
         <span class="tag">✦ That's the moment the sale is made.</span>
       </div>
       <div class="sticker s1">No pressure. Real next steps.</div>
+      </div>
     </div>
   </div>
 </header>
@@ -280,7 +340,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 
 <section class="intro">
   <div class="wrap">
+    <div class="intro-row">
     <p class="rv">You've done the hard part: the content, the ads, the outreach — the calendar is filling up. But a booked call isn't a client. <em>I take your sales calls and turn them into clients</em>, by getting prospects to say out loud why they need what you sell. They believe 0% of what you tell them and 100% of what they tell themselves.</p>
+    <figure class="polaroid rv"><span class="tape"></span><img src="img-call.jpg" alt="Bruna laughing while on her phone at a café table" width="751" height="1000" loading="lazy"><figcaption>On a call, probably ✦</figcaption></figure>
+    </div>
     <div class="stats rv">
       <div class="stat"><b>28</b><span>deals &amp; new phases closed in the last 12 months (B2B software implementation)</span></div>
       <div class="stat"><b>260%</b><span>of target in my final quarter as Renewals Account Manager for Dell EMC</span></div>
@@ -337,9 +400,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
   <svg class="spark" style="right:6%;top:70px;opacity:.9" width="80" height="80" fill="#E2572B"><use href="#burst"/></svg>
   <svg class="spark" style="right:18%;top:40px" width="26" height="26" fill="#CDBBF0"><use href="#spark"/></svg>
   <div class="wrap">
-    <div class="label rv">How I sell</div>
-    <h2 class="rv">Don't pitch.<br>Ask.</h2>
-    <p class="lead rv">Every call follows one structure, based on Question-Based Selling. The prospect builds their own case for buying, so the decision sticks after the call ends.</p>
+    <div class="m-head">
+      <div>
+        <div class="label rv">How I sell</div>
+        <h2 class="rv">Don't pitch.<br>Ask.</h2>
+        <p class="lead rv">Every call follows one structure, based on Question-Based Selling. The prospect builds their own case for buying, so the decision sticks after the call ends.</p>
+      </div>
+      <div class="m-photo rv"><img src="img-confident.jpg" alt="Bruna looking straight at the camera, holding a laptop" width="638" height="1000" loading="lazy"><span class="sticker">Curious. Calm. Direct.</span></div>
+    </div>
     <div class="steps">
       <div class="step rv"><div class="n">01</div><h3>Frame the call</h3><p>Set the agenda, ask permission to ask questions, and make it clear I'll say so if it's not the right fit.</p></div>
       <div class="step rv"><div class="n">02</div><h3>Discovery</h3><p>Why now? What triggered the call? Who's involved? Listen to understand, not to reply — and write down their exact words.</p></div>
@@ -362,20 +430,45 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
     <div class="label rv">Track record</div>
     <h2 class="rv">My sales journey</h2>
     <div class="journey" style="margin-top:46px">
+      <div class="collage rv">
+        <figure class="big"><img src="img-door.jpg" alt="Bruna sitting on a doorstep in Portugal with her laptop" width="1032" height="1400" loading="lazy"></figure>
+        <figure class="stamp"><img src="img-typing.jpg" alt="Hands typing at a wooden desk" width="667" height="1000" loading="lazy"></figure>
+        <span class="sticker">Based in Europe ✦</span>
+      </div>
       <div class="about rv">
         <p>I started on a shop floor in Brazil, and I've been selling ever since — retail, enterprise renewals, recruitment, partnerships and software implementation.</p>
         <p>Over 12 years living in Europe and 6 years as a freelancer, I've sold on the phone to Dell EMC resellers, recruited talent for international companies, built a global partner network from nothing and closed implementation deals for a Platinum monday.com partner.</p>
         <p>The common thread is the same: people buy when they feel understood. My job is to ask the questions that get them there — and then make the next step easy.</p>
         <a class="btn btn-o" style="margin-top:10px" href="https://www.linkedin.com/in/theremotesavvy/" target="_blank" rel="noopener">Full profile on LinkedIn ↗</a>
       </div>
-      <ol class="tl rv">
+    </div>
+    <ol class="tl rv" style="margin-top:70px">
         <li><h4>Implementation sales</h4><span class="co">Platinum monday.com partner · Remote</span><span class="win">28 closed / 12 mo</span></li>
         <li><h4>Recruiter &amp; Partnerships Manager</h4><span class="co">AdVenture Media Group · 2021 – present</span><span class="win">Global partner network</span></li>
         <li><h4>Renewals Account Manager — Dell EMC</h4><span class="co">ServiceSource · Dublin</span><span class="win">260% of target</span></li>
         <li><h4>Supervisor</h4><span class="co">Forever 21 · Dublin · team of 60</span><span class="win">Team lead</span></li>
         <li><h4>Sales Advisor</h4><span class="co">Chilli Beans · Brazil</span><span class="win">+60% over target</span></li>
-      </ol>
-    </div>
+    </ol>
+  </div>
+</section>
+
+<section class="ribbon" aria-label="Photos of Bruna working remotely">
+  <div class="label">Remote, wherever the Wi-Fi is good</div>
+  <div class="rtrack">
+    <figure class="ph"><img src="img-s1.jpg" alt="Bruna smiling at a garden table with her laptop" loading="lazy"></figure>
+    <figure class="ph"><img src="img-s3.jpg" alt="Laptop, phone and a cappuccino on a café table" loading="lazy"></figure>
+    <figure class="ph"><img src="img-s2.jpg" alt="Bruna walking past bougainvillea, holding her laptop" loading="lazy"></figure>
+    <figure class="ph"><img src="img-s6.jpg" alt="Bruna laughing at a café with her phone and laptop" loading="lazy"></figure>
+    <figure class="ph"><img src="img-s4.jpg" alt="Bruna smiling in a white street in Portugal" loading="lazy"></figure>
+    <figure class="ph"><img src="img-s7.jpg" alt="Bruna checking her phone at a café" loading="lazy"></figure>
+    <figure class="ph"><img src="img-s5.jpg" alt="Bruna working on her laptop under a pergola" loading="lazy"></figure>
+    <figure class="ph" aria-hidden="true"><img src="img-s1.jpg" alt="" loading="lazy"></figure>
+    <figure class="ph" aria-hidden="true"><img src="img-s3.jpg" alt="" loading="lazy"></figure>
+    <figure class="ph" aria-hidden="true"><img src="img-s2.jpg" alt="" loading="lazy"></figure>
+    <figure class="ph" aria-hidden="true"><img src="img-s6.jpg" alt="" loading="lazy"></figure>
+    <figure class="ph" aria-hidden="true"><img src="img-s4.jpg" alt="" loading="lazy"></figure>
+    <figure class="ph" aria-hidden="true"><img src="img-s7.jpg" alt="" loading="lazy"></figure>
+    <figure class="ph" aria-hidden="true"><img src="img-s5.jpg" alt="" loading="lazy"></figure>
   </div>
 </section>
 
@@ -397,9 +490,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
   <svg class="spark" style="left:6%;top:60px" width="60" height="60" fill="#24142F"><use href="#spark"/></svg>
   <svg class="spark" style="right:7%;bottom:80px" width="90" height="90" fill="#F5C6B3"><use href="#burst"/></svg>
   <div class="wrap">
+    <div class="cta-grid">
+    <figure class="cta-photo"><img src="img-me.jpg" alt="Bruna pointing at herself with a playful smile, holding her laptop" width="1400" height="1060" loading="lazy"></figure>
+    <div>
     <div class="label">Ready when you are</div>
     <h2>Let's close<br>your calendar.</h2>
     <p>Tell me about your offer and your calls. If I'm not the right closer for you, I'll tell you — and point you somewhere better.</p>
+    </div>
+    </div>
     <div class="contact">
       <a href="https://calendar.app.google/1NFmuSzR9HDfeMqQ6" target="_blank" rel="noopener"><small>Book a call</small><strong>Schedule an intro call ↗</strong></a>
       <a href="mailto:bruna@theremotesavvy.com"><small>Email</small><strong>bruna@theremotesavvy.com ↗</strong></a>
